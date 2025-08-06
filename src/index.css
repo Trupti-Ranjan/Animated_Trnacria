@@ -4,3 +4,14 @@
 @theme{
   --font-primary: "Plus Jakarta Sans", "sans-serif";
 }
+
+body, html, a, button, span {
+  cursor: none;
+}
+
+@layer utilities {
+  ::selection {
+    background-color: #ce3437; 
+    color: black;
+  }
+}

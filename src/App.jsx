@@ -3,14 +3,18 @@ import React, { useState, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useSmoothScroll } from './hooks/useSmoothScroll';
+
 
 import Hero from "./components/Hero";
 import Hero2 from "./components/Hero2";
 import Navbar from "./components/Navbar";
+import Cursor from "./components/Cursor";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
+  useSmoothScroll();
   const [showButton, setShowButton] = useState(false);
 
   useGSAP(() => {
@@ -39,7 +43,7 @@ function App() {
   return (
     <div className="font-primary main overflow-hidden">
       
-
+      <Cursor />
       <Navbar />
       <Hero />
       <Hero2 />

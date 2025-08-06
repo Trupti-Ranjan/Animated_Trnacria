@@ -1,5 +1,6 @@
 import React from "react";
 import Marquee from "./Marquee";
+import hero from "../../public/images/hero.jpg"
 
 const Hero = () => {
   const firstWords = ["ELEVATE", "DOMINATE", "DISCOVER"];
@@ -9,8 +10,8 @@ const Hero = () => {
       <div>
         <img
           className="h-screen w-full object-cover absolute left-0 top-0"
-          src="/images/hero.jpg"
-          alt=""
+          src={hero}
+          alt="Model"
         />
         <div className="bg-black/20 absolute inset-0 z-10"></div>
       </div>
